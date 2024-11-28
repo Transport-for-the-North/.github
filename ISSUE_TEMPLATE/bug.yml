@@ -18,15 +18,31 @@ body:
           required: true
         - label: >
             I have confirmed this bug exists on the main branch.
+          required: true
 
   - type: textarea
     id: example
     attributes:
-      label: Reproducible Example
+      label: Reproducible Code Example
       description: >
-        Please follow [this guide](https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports) on how to
-        provide a minimal, copy-pastable example.
+        Please follow [this guide](https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports)
+        on how to provide a minimal, copy-pastable example.
       render: python
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error Message / Traceback
+      description: >
+        If an error message occurred, please paste the full message (or traceback) here.
+      value: >
+        <details>
+
+
+        Replace this line with the full error message or traceback.
+
+
+        </details>
 
   - type: textarea
     id: problem
@@ -36,7 +52,7 @@ body:
         Please provide a description of the issue shown in the reproducible example.
     validations:
       required: true
-  
+
   - type: textarea
     id: expected-behavior
     attributes:
@@ -45,7 +61,7 @@ body:
         Please describe or show a code example of the expected behavior.
     validations:
       required: true
-  
+
   - type: textarea
     id: version
     attributes:

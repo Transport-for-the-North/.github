@@ -1,0 +1,44 @@
+name: Documentation Improvement
+description: Report wrong or missing documentation
+title: "[Docs]: "
+labels: [documentation]
+projects: ["Transport-for-the-North/48"]
+
+body:
+  - type: checkboxes
+    attributes:
+      label: Version checks
+      options:
+        - label: >
+            I have checked that the issue still exists on the latest versions on read the docs.
+          required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location of the documentation
+      description: >
+        Please provide the location of the documentation, e.g. "caf.toolkit.CostDistribution" or the
+        URL of the documentation, e.g.
+        "https://caftoolkit.readthedocs.io/en/latest/_autosummary/caf.toolkit.cost_utils.CostDistribution.html"
+      placeholder: https://caftoolkit.readthedocs.io/en/latest/_autosummary/caf.toolkit.cost_utils.CostDistribution.html
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Documentation problem
+      description: >
+        Please provide a description of what documentation you believe needs to be fixed/improved
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested fix for documentation
+      description: >
+        Please explain the suggested fix and **why** it's better than the existing documentation
+    validations:
+      required: true

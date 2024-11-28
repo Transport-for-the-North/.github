@@ -2,18 +2,11 @@
 Ways Of Working
 ===============
 
-.. role:: python(code)
-   :language: python
-
-.. _`Google Python Style Guide`: https://google.github.io/styleguide/pyguide.html
 .. _`pydocstyle`: http://www.pydocstyle.org/en/stable/index.html
 .. _`black`: https://github.com/psf/black
 .. _`pylint`: https://github.com/PyCQA/pylint
 .. _`mypy`: https://github.com/python/mypy
 .. _`pyproject.toml`: pyproject.toml
-.. _`todo comments`: https://google.github.io/styleguide/pyguide.html#312-todo-comments
-.. _`old-style`: https://docs.python.org/3/library/stdtypes.html#old-string-formatting
-.. _`new-style`: https://docs.python.org/3/library/stdtypes.html#str.format
 .. _`CAF coding standards`: https://transport-for-the-north.github.io/CAF-Handbook/contribution/coding_standards/overview.html
 .. _`pytest`: https://docs.pytest.org/en/stable/
 
@@ -29,14 +22,14 @@ Feedback & Requests
 -------------------
 
 For any feedback, or requests, on the code, documentation or anything else, please create a GitHub
-issue on the repository to describe you suggestion and open the discussion. We have created some
-issue templates to outline the different types of suggestions we expect.
+issue to describe your suggestion and open the discussion. We have created some issue templates to
+show the information we expect for different types of suggestions.
 
 Changes & Development
 ---------------------
 
-Prior to any changes consider creating an issue to discuss your proposed changes and get some
-feedback from people on anything to consider during implementation.
+Prior to making any changes, please consider creating an issue to discuss your proposed changes
+and get feedback from people on anything to consider during implementation.
 
 Any changes to the code or documentation should be worked on in a separate fork (or branch if
 you're an organisation member) of the repository. For significant pieces of new functionality
@@ -50,9 +43,9 @@ For smaller pieces of work, such as a bug fix, a normal pull request can be made
 Coding Style
 ^^^^^^^^^^^^
 
-TFN's coding follows the `CAF coding standards`_, before contributing
-to this repository we would recommend reading through the standards.
-However, at a high level the coding standards can be summarised as:
+TFN's coding follows the `CAF coding standards`_, before contributing to this repository we would
+recommend reading through the standards. However, at a high level the coding standards can be
+summarised as:
 
 - Code uses numpy-style doc-strings, checked with `pydocstyle`_
 - Code must be formatted with `black`_

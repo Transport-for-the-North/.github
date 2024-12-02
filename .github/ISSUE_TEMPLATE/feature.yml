@@ -2,7 +2,6 @@ name: Feature Request
 description: Suggest an new feature / change to the functionality.
 title: "[Feat]: "
 labels: [enhancement]
-projects: ["Transport-for-the-North/48"]
 
 body:
   - type: checkboxes

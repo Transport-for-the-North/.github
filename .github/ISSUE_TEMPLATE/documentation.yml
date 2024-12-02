@@ -2,7 +2,6 @@ name: Documentation Improvement
 description: Report wrong or missing documentation
 title: "[Docs]: "
 labels: [documentation]
-projects: ["Transport-for-the-North/48"]
 
 body:
   - type: checkboxes

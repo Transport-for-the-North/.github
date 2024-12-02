@@ -1,0 +1,63 @@
+name: Feature Request
+description: Suggest an new feature / change to the functionality.
+title: "[Feat]: "
+labels: [enhancement]
+projects: ["Transport-for-the-North/48"]
+
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Feature Type
+      description: Please check what type of feature request you would like to propose.
+      options:
+        - label: >
+            Adding new functionality
+        - label: >
+            Changing existing functionality
+        - label: >
+            Removing existing functionality
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem Description
+      description: >
+        Please describe what problem the feature would solve.
+      placeholder: >
+        Add method to write cost distributions to CSVs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature
+    attributes:
+      label: Feature Description
+      description: >
+        Please describe how the new feature would be implemented, using psudocode if relevant.
+      placeholder: >
+        Update the CostDistribution class with a new `to_csv` method which takes a filepath
+        and writes the cost distribution table to it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Alternative Solutions
+      description: >
+        Please describe any alternative solution (existing functionality, 3rd party package, etc.)
+        that would satisfy the feature request.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: >
+        Please provide any relevant GitHub issues, code examples or references that help describe
+        and support the feature request.
+      placeholder: >
+        This could include an example implementation of the feature in full or
+        links to additional resources which aid understanding.

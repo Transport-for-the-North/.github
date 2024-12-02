@@ -21,15 +21,14 @@ to accept contributions on various aspects of our repositories, including:
 Feedback & Requests
 -------------------
 
-For any feedback, or requests, on the code, documentation or anything else, please create a GitHub
-issue to describe your suggestion and open the discussion. We have created some issue templates to
-show the information we expect for different types of suggestions.
+If you have any feedback or requests on the code, documentation, or anything else, please create a GitHub
+issue. We have created some issue templates to guide you through the information needed for different types of suggestions, and opens the discussions for collaboration.
 
 Changes & Development
 ---------------------
 
-Prior to making any changes, please consider creating an issue to discuss your proposed changes
-and get feedback from people on anything to consider during implementation.
+Prior to making any changes, please consider creating an issue to discuss your proposed changes. 
+This helps us to support you with the changes and provide wider context and considerations for your implementation.
 
 Any changes to the code or documentation should be worked on in a separate fork (or branch if
 you're an organisation member) of the repository. For significant pieces of new functionality

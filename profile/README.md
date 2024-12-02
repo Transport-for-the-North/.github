@@ -48,13 +48,13 @@ The tools and process that fall into this category are sometimes more specific t
 
 # Contribution
 
-We encourage use of, and contributions to, the repositories within this organisation, licenses are provided within our repositories and contribution guidelines are outlined [here](CONTRIBUTING.md).
+We encourage use of, and contributions to, the repositories within this organisation, licenses are provided within our repositories and contribution guidelines are outlined [here](https://github.com/Transport-for-the-North/.github/blob/main/CONTRIBUTING.rst).
 
 # Useful Links
 
 - [CAF Handbook](https://transport-for-the-north.github.io/CAF-Handbook)
-- [Contributing Guidelines](CONTRIBUTING.md)
+- [Contributing Guidelines](https://github.com/Transport-for-the-North/.github/blob/main/CONTRIBUTING.rst)
 
 # Contact Us
 
-- TfN Offer <TfNOffer@transportforthenorth.com>
+- <TfNOffer@transportforthenorth.com>

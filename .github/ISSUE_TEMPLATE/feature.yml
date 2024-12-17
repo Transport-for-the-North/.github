@@ -2,9 +2,20 @@ name: Feature Request
 description: Suggest an new feature / change to the functionality.
 title: "[Feat]: "
 labels: [enhancement]
-projects: ["Transport-for-the-North/48"]
 
 body:
+  - type: markdown
+    attributes:
+      value: >
+        Thank you for taking time to suggest this feature or improvement.
+
+        Please describe the problem this feature will improve before explaining the 
+        details of the feature itself. If there is a current workaround please include 
+        any information about this and why the new feature would be better.
+
+        Please use the "Additional Context" question to note if this feature
+        requires specific inputs, outputs, or you have an example implementation.
+
   - type: checkboxes
     id: checks
     attributes:
@@ -49,7 +60,7 @@ body:
         Please describe any alternative solution (existing functionality, 3rd party package, etc.)
         that would satisfy the feature request.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: context

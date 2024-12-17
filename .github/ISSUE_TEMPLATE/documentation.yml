@@ -2,9 +2,16 @@ name: Documentation Improvement
 description: Report wrong or missing documentation
 title: "[Docs]: "
 labels: [documentation]
-projects: ["Transport-for-the-North/48"]
 
 body:
+  - type: markdown
+    attributes:
+      value: >
+        Thank you for taking time to suggest this documentation improvement.
+
+        Please explain what is unclear or missing from the documentation and,
+        if possible, how to improve. 
+
   - type: checkboxes
     attributes:
       label: Version checks
@@ -30,7 +37,10 @@ body:
     attributes:
       label: Documentation problem
       description: >
-        Please provide a description of what documentation you believe needs to be fixed/improved
+        Please describe which part of the documentation needs to be
+        added, fixed or improved.
+      placeholder: >
+        The explanation of X is missing / not clear... / doesn't explain...
     validations:
       required: true
 
@@ -39,6 +49,10 @@ body:
     attributes:
       label: Suggested fix for documentation
       description: >
-        Please explain the suggested fix and **why** it's better than the existing documentation
+        Please explain the suggested fix and **why** it's better than the existing documentation.
+      placeholder: >
+        The documentation of X should include... / be rewritten to... / be removed
+
+        Because ...
     validations:
       required: true

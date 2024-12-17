@@ -2,13 +2,22 @@ name: Bug Report
 description: File a bug report.
 title: "[Bug]: "
 labels: ["bug"]
-projects: ["Transport-for-the-North/48"]
 
 body:
+  - type: markdown
+    attributes:
+      value: >
+        Thank you for taking the time to fill out this bug report. 
+
+        Help us help you! Please explain the problem and your expected result.
+        The questions below show the information we need to properly
+        reproduce and fix the bug, solving your problem quicker.
+
   - type: checkboxes
     id: checks
     attributes:
       label: Version Checks
+      description: Please confirm you have checked the following.
       options:
         - label: >
             I have checked that this issue has not already been reported.
@@ -25,8 +34,9 @@ body:
     attributes:
       label: Reproducible Code Example
       description: >
-        Please follow [this guide](https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports)
-        on how to provide a minimal, copy-pastable example.
+        Please provide a simple example of code which can reproduce the bug.
+        [This guide](https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports)
+        explains how to provide a minimal, copy-pastable example.
       render: python
 
   - type: textarea
@@ -50,6 +60,8 @@ body:
       label: Issue Description
       description: >
         Please provide a description of the issue shown in the reproducible example.
+      placeholder: >
+        X does not produce the desired result when I...
     validations:
       required: true
 
@@ -59,6 +71,8 @@ body:
       label: Expected Behavior
       description: >
         Please describe or show a code example of the expected behavior.
+      placeholder: >
+        I would have expected the following to happen...
     validations:
       required: true
 

@@ -23,13 +23,12 @@ For further information on the CAF, please see the [CAF Handbook](https://transp
 
 | Repository                                                                        | Description                                                 |
 | :-------------------------------------------------------------------------------: | :---------------------------------------------------------- |
-| [CAF.toolkit](https://github.com/Transport-for-the-North/caf.toolkit)             | Generic tools and functions that are used across transport analysis. |
+| [caf.toolkit](https://github.com/Transport-for-the-North/caf.toolkit)             | Generic tools and functions that are used across transport analysis. |
 | [caf.space](https://github.com/Transport-for-the-North/caf.space)                 | Tool for generating standard weighting translations in .csv format describing how to convert between different zoning systems |
 | [caf.distribute](https://github.com/Transport-for-the-North/caf.distribute)       | Matrix distribution including gravity model and furnessing. |
 | [caf.carbon](https://github.com/Transport-for-the-North/caf.carbon)               | Carbon analysis toolkit |
 | [caf.base](https://github.com/Transport-for-the-North/caf.base)                   | Core classes and definitions for use in other models, including zone systems, segmentation and DVectors. |
 | [caf.viz](https://github.com/Transport-for-the-North/caf.viz)                     | Python visualisations and styling. |
-| [caf-freight-tools](https://github.com/Transport-for-the-North/caf-freight-tools) | LGV model and HGV processing tools. |
 
 ## TfN
 
@@ -37,14 +36,15 @@ Internal TfN tools are those which we use internally, but we have not migrated i
 We use and develop these tools within TfN, sharing them to allow for others to benefit from our work, view our analytics, and maybe build upon them in their own work.
 The tools and process that fall into this category are sometimes more specific to the transport analytics needs of the North of England.
 
-| Repository                                                                  | Description                                                            |
-| :-------------------------------------------------------------------------: | :--------------------------------------------------------------------- |
-| [NorMITs-Demand](https://github.com/Transport-for-the-North/NorMITs-Demand) | Collection of tools for taking land use data and converting into synthetic demand matrices, including forecasting travel demand. |
-| [Land-Use](https://github.com/Transport-for-the-North/Land-Use)             | Collection of tools for generating and forecasting detailed land use data. |
-| [NTS-Processing](https://github.com/Transport-for-the-North/NTS-Processing) | Standardised tools for sampling and interacting with the National Travel Survey in a consistent way. |
-| [BODS-Extractor](https://github.com/Transport-for-the-North/BODS-Extractor) | Extracts and analyses BODS (Bus Open Data Service) data. |
-| [otp4gb-py](https://github.com/Transport-for-the-North/otp4gb-py)           | Produces cost metrics for public transport routing between origins and destinations using Open Trip Planner. |
-| [DLIT_LU](https://github.com/Transport-for-the-North/DLIT_LU)               | The Land Use Component of the Development Log Integration Tool |
+| Repository                                                                        | Description                                                            |
+| :-------------------------------------------------------------------------------: | :--------------------------------------------------------------------- |
+| [NorMITs-Demand](https://github.com/Transport-for-the-North/NorMITs-Demand)       | Collection of tools for taking land use data and converting into synthetic demand matrices, including forecasting travel demand. |
+| [Land-Use](https://github.com/Transport-for-the-North/Land-Use)                   | Collection of tools for generating and forecasting detailed land use data. |
+| [NTS-Processing](https://github.com/Transport-for-the-North/NTS-Processing)       | Standardised tools for sampling and interacting with the National Travel Survey in a consistent way. |
+| [BODS-Extractor](https://github.com/Transport-for-the-North/BODS-Extractor)       | Extracts and analyses BODS (Bus Open Data Service) data. |
+| [otp4gb-py](https://github.com/Transport-for-the-North/otp4gb-py)                 | Produces cost metrics for public transport routing between origins and destinations using Open Trip Planner. |
+| [DLIT_LU](https://github.com/Transport-for-the-North/DLIT_LU)                     | The Land Use Component of the Development Log Integration Tool |
+| [caf-freight-tools](https://github.com/Transport-for-the-North/caf-freight-tools) | LGV model and HGV processing tools. |
 
 # Contribution
 

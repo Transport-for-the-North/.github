@@ -7,11 +7,11 @@ body:
   - type: markdown
     attributes:
       value: >
-        Thank you for taking the time to fill this bug report. 
+        Thank you for taking the time to fill out this bug report. 
 
-        Please provide as much detail explaining the problem and expected result.
-        The questions below show the information we need to be able to properly
-        reproduce and fix the bug.
+        Help us help you! Please explain the problem and your expected result.
+        The questions below show the information we need to properly
+        reproduce and fix the bug, solving your problem quicker.
 
   - type: checkboxes
     id: checks

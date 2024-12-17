@@ -48,7 +48,7 @@ body:
         Please describe any alternative solution (existing functionality, 3rd party package, etc.)
         that would satisfy the feature request.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: context

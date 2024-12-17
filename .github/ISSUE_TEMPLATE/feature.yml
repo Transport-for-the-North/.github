@@ -7,16 +7,14 @@ body:
   - type: markdown
     attributes:
       value: >
-        Thank you for taking time to suggest this feature, or improvement.
+        Thank you for taking time to suggest this feature or improvement.
 
-        Please provide information about the problem this feature is trying
-        to improve before explaining the details of the feature itself. If
-        there is a current workaround please include any information about this
-        and why the new feature would be better.
+        Please describe the problem this feature will improve before explaining the 
+        details of the feature itself. If there is a current workaround please include 
+        any information about this and why the new feature would be better.
 
-        For any additional information about the feature such as inputs, outputs
-        or an example implementation, please provide that for the
-        "Additional Context" question.
+        Please use the "Additional Context" question to note if this feature
+        requires specific inputs, outputs, or you have an example implementation.
 
   - type: checkboxes
     id: checks

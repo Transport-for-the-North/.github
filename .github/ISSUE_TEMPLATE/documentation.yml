@@ -9,8 +9,8 @@ body:
       value: >
         Thank you for taking time to suggest this documentation improvement.
 
-        Please provide information to explain what is unclear, or missing from,
-        the documentation and an explanation of your suggestion for improvement. 
+        Please explain what is unclear or missing from the documentation and,
+        if possible, how to improve. 
 
   - type: checkboxes
     attributes:
@@ -37,7 +37,7 @@ body:
     attributes:
       label: Documentation problem
       description: >
-        Please provide a description of what documentation you believe needs to be
+        Please describe which part of the documentation needs to be
         added, fixed or improved.
       placeholder: >
         The explanation of X is missing / not clear... / doesn't explain...

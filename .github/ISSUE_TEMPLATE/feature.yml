@@ -1,5 +1,5 @@
 name: Feature Request
-description: Suggest an new feature / change to the functionality.
+description: Suggest a new feature or change to existing functionality.
 title: "[Feat]: "
 labels: [enhancement]
 
@@ -16,39 +16,57 @@ body:
         Please use the "Additional Context" question to note if this feature
         requires specific inputs, outputs, or you have an example implementation.
 
-  - type: checkboxes
-    id: checks
+  - type: dropdown
+    id: feature-type
     attributes:
       label: Feature Type
       description: Please check what type of feature request you would like to propose.
       options:
-        - label: >
-            Adding new functionality
-        - label: >
-            Changing existing functionality
-        - label: >
-            Removing existing functionality
+        - label: Adding new functionality
+          value: adding
+        - label: Changing existing functionality
+          value: changing
+        - label: Removing existing functionality
+          value: removing
+    validations:
+      required: true
 
   - type: textarea
     id: description
     attributes:
       label: Problem Description
       description: >
-        Please describe what problem the feature would solve.
+        What issue or user need does this feature address?
+        Describe the current behaviour and why it is inadequate.
       placeholder: >
-        Add method to write cost distributions to CSVs.
+        e.g. The repository contains hard-coded secrets in `appsettings.json`,
+        exposing credentials to anyone with repo access.
     validations:
       required: true
 
   - type: textarea
-    id: feature
+    id: impact
     attributes:
-      label: Feature Description
+      label: Impact
       description: >
-        Please describe how the new feature would be implemented, using psudocode if relevant.
+        What are the risks or consequences if this problem is not addressed?
+        Consider security, compliance, maintainability or user experience.
       placeholder: >
-        Update the CostDistribution class with a new `to_csv` method which takes a filepath
-        and writes the cost distribution table to it.
+        e.g. Unauthorised access to production database; difficulty rotating credentials;
+        non-compliance with security policies.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-approach
+    attributes:
+      label: Proposed Approach
+      description: >
+        Outline the steps or design you recommend to resolve the problem.
+        Reference technologies, config files or workflows where applicable.
+      placeholder: >
+        e.g. Remove secrets from config file; replace with environment variables
+        injected via GitHub Actions; configure Azure App Service settings accordingly.
     validations:
       required: true
 
@@ -57,8 +75,11 @@ body:
     attributes:
       label: Alternative Solutions
       description: >
-        Please describe any alternative solution (existing functionality, 3rd party package, etc.)
-        that would satisfy the feature request.
+        What other options did you consider?
+        List pros and cons of each to explain why they were not chosen.
+      placeholder: >
+        e.g. Use Azure Key Vault with managed identity (more secure but requires extra infra);
+        .NET User Secrets for local dev (not suitable for production).
     validations:
       required: false
 
@@ -72,3 +93,18 @@ body:
       placeholder: >
         This could include an example implementation of the feature in full or
         links to additional resources which aid understanding.
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: >
+        Define clear, measurable conditions that must be met for this feature
+        to be considered complete and ready for review.
+      placeholder: |
+        - `appsettings.json` contains no real secrets  
+        - GitHub Actions workflow injects required environment variables  
+        - Azure App Service settings match injected variables  
+        - Application builds, deploys and runs correctly in each environment
+    validations:
+      required: true

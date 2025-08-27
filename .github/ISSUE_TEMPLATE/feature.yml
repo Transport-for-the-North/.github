@@ -22,12 +22,9 @@ body:
       label: Feature Type
       description: Please check what type of feature request you would like to propose.
       options:
-        - label: Adding new functionality
-          value: adding
-        - label: Changing existing functionality
-          value: changing
-        - label: Removing existing functionality
-          value: removing
+        - Adding new functionality
+        - Changing existing functionality
+        - Removing existing functionality
     validations:
       required: true
 

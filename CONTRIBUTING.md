@@ -20,6 +20,9 @@ and use [Git](https://git-scm.com/) for version control, see CAF Handbook's
 [GitHub section](https://transport-for-the-north.github.io/CAF-Handbook/contribution/github_wow/overview.html)
 for guidance.
 
+> [!NOTE]
+> Code [releases](#releases) are managed using Semantic Versioning.
+
 ## Changes & Development
 
 Prior to making any changes, please consider creating an issue to discuss your proposed changes.
@@ -65,4 +68,4 @@ Given a version number MAJOR.MINOR.PATCH (e.g. 1.2.3), increment the:
 > [!NOTE]
 > The main branch of a CAF repository contains a work in progress, and  may **not**
 > contain a stable version of the codebase. We aim to keep the main branch stable, but for the
-> most stable versions, please see the releases page on GitHub.
+> most stable versions, please see repository tags or releases page.

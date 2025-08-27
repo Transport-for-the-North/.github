@@ -13,6 +13,13 @@ to accept contributions on various aspects of our repositories, including:
 If you have any feedback or requests on the code, documentation, or anything else, please create a GitHub
 issue. We have created some issue templates to guide you through the information needed for different types of suggestions, and opens the discussions for collaboration.
 
+## Version Control
+
+CAF codebases are all hosted on [GitHub](https://github.com/Transport-for-the-North)
+and use [Git](https://git-scm.com/) for version control, see CAF Handbook's
+[GitHub section](https://transport-for-the-north.github.io/CAF-Handbook/contribution/github_wow/overview.html)
+for guidance.
+
 ## Changes & Development
 
 Prior to making any changes, please consider creating an issue to discuss your proposed changes.
@@ -42,3 +49,20 @@ summarised as:
 
 See the CAF template's [pyproject.toml](https://github.com/Transport-for-the-North/cookiecutter-caf/blob/main/%7B%7B%20cookiecutter.project_slug%20%7D%7D/pyproject.toml)
 to see how these tools have been set up in order to meet TfN's coding standards.
+
+## Releases
+
+The CAF codebases follow [Semantic Versioning](https://semver.org/); the convention
+for most software products. In summary, this means the version numbers should be read in the
+following way.
+
+Given a version number MAJOR.MINOR.PATCH (e.g. 1.2.3), increment the:
+
+- MAJOR version when you make incompatible API changes,
+- MINOR version when you add functionality in a backwards compatible manner, and
+- PATCH version when you make backwards compatible bug fixes.
+
+> [!NOTE]
+> The main branch of a CAF repository contains a work in progress, and  may **not**
+> contain a stable version of the codebase. We aim to keep the main branch stable, but for the
+> most stable versions, please see the releases page on GitHub.

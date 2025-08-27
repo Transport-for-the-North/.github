@@ -68,7 +68,7 @@ body:
         e.g. Remove secrets from config file; replace with environment variables
         injected via GitHub Actions; configure Azure App Service settings accordingly.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: alternative

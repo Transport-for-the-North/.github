@@ -44,10 +44,9 @@ before contributing to this repository we would
 recommend reading through the standards. However, at a high level the coding standards can be
 summarised as:
 
-- Code uses numpy-style doc-strings, checked with [pydocstyle](http://www.pydocstyle.org/en/stable/index.html)
-- Code must be formatted with [black](https://github.com/psf/black)
-- Code must be checked, and all errors corrected, by running [pylint](https://github.com/PyCQA/pylint)
-- Code must be checked, and all errors corrected, by running [mypy](https://github.com/python/mypy)
+- Code must be formatted with [ruff format](https://docs.astral.sh/ruff/formatter/)
+- Code must be checked, and all errors corrected, by running [ruff check](https://docs.astral.sh/ruff/linter/)
+- Type annotations must be used and checked, and all errors corrected, by running [mypy](https://github.com/python/mypy)
 - Code must include unittests, and integration tests (where relevant), built with [pytest](https://docs.pytest.org/en/stable/)
 
 See the CAF template's [pyproject.toml](https://github.com/Transport-for-the-North/cookiecutter-caf/blob/main/%7B%7B%20cookiecutter.project_slug%20%7D%7D/pyproject.toml)

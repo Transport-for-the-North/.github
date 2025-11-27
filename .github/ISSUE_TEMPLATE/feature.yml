@@ -55,6 +55,21 @@ body:
       required: true
 
   - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: >
+        Define clear, measurable conditions that must be met for this feature
+        to be considered complete and ready for review.
+      placeholder: |
+        - `appsettings.json` contains no real secrets  
+        - GitHub Actions workflow injects required environment variables  
+        - Azure App Service settings match injected variables  
+        - Application builds, deploys and runs correctly in each environment
+    validations:
+      required: true
+
+  - type: textarea
     id: proposed-approach
     attributes:
       label: Proposed Approach
@@ -90,18 +105,3 @@ body:
       placeholder: >
         This could include an example implementation of the feature in full or
         links to additional resources which aid understanding.
-
-  - type: textarea
-    id: acceptance-criteria
-    attributes:
-      label: Acceptance Criteria
-      description: >
-        Define clear, measurable conditions that must be met for this feature
-        to be considered complete and ready for review.
-      placeholder: |
-        - `appsettings.json` contains no real secrets  
-        - GitHub Actions workflow injects required environment variables  
-        - Azure App Service settings match injected variables  
-        - Application builds, deploys and runs correctly in each environment
-    validations:
-      required: true

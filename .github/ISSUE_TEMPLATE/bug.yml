@@ -30,31 +30,6 @@ body:
           required: true
 
   - type: textarea
-    id: example
-    attributes:
-      label: Reproducible Code Example
-      description: >
-        Please provide a simple example of code which can reproduce the bug.
-        [This guide](https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports)
-        explains how to provide a minimal, copy-pastable example.
-      render: python
-
-  - type: textarea
-    id: error
-    attributes:
-      label: Error Message / Traceback
-      description: >
-        If an error message occurred, please paste the full message (or traceback) here.
-      value: >
-        <details>
-
-
-        Replace this line with the full error message or traceback.
-
-
-        </details>
-
-  - type: textarea
     id: problem
     attributes:
       label: Issue Description
@@ -77,6 +52,31 @@ body:
       required: true
 
   - type: textarea
+    id: error
+    attributes:
+      label: Error Message / Traceback
+      description: >
+        If an error message occurred, please paste the full message (or traceback) here.
+      value: >
+        <details>
+
+
+        Replace this line with the full error message or traceback.
+
+
+        </details>
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Reproducible Code Example
+      description: >
+        Please provide a simple example of code which can reproduce the bug.
+        [This guide](https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports)
+        explains how to provide a minimal, copy-pastable example.
+      render: python
+
+  - type: textarea
     id: version
     attributes:
       label: Installed Versions
@@ -91,5 +91,3 @@ body:
 
 
         </details>
-    validations:
-      required: true

@@ -195,7 +195,6 @@ We encourage use of, and contributions to, the repositories within this organisa
 
 # Useful Links
 
-- [CAF Handbook](https://transport-for-the-north.github.io/CAF-Handbook)
 - [Contributing Guidelines](https://github.com/Transport-for-the-North/.github/blob/main/CONTRIBUTING.md)
 
 ------------------------------------------------------------------------

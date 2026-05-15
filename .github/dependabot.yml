@@ -8,6 +8,7 @@ updates:
   - package-ecosystem: "pip"
     directory: "/" # Location of package manifests
     schedule:
+      interval: "cron
       cronjob: "0 0 28 * *"
     allow:
       # Only allow major version updates to reduce noise from minor/patch updates
@@ -24,6 +25,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/" # Location of package manifests
     schedule:
+      interval: "cron
       cronjob: "0 0 28 * *"
     target-branch: "dev"
     allow:
@@ -38,5 +40,6 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/" # Location of package manifests
     schedule:
+      interval: "cron
       cronjob: "0 0 28 * *"
     open-pull-requests-limit: 1

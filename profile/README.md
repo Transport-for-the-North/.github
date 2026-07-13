@@ -1,25 +1,40 @@
 <div align="center" style="background-color: white;">
 <a href="https://www.transportforthenorth.com/">
-<img src="https://www.transportforthenorth.com/wp-content/themes/tfn-theme/img/logo.svg"
+<img src="https://www.transportforthenorth.com/logo.svg"
   alt="Transport for the North logo">
 </a>
 </div>
 
 # About Us
 
-Transport for the North (TfN) is the first Sub-national Transport Body (STB) in England. We were formed in 2018 to transform the transport system across the North of England, providing the infrastructure needed to drive economic growth.
-TfN adds strategic value by ensuring that funding and strategy decisions about transport in the North are informed by local knowledge, requirements, and analytically backed evidence; more details on our work can be found on our website at [transportforthenorth.com](https://www.transportforthenorth.com/).
+Transport for the North (TfN) is England’s first Sub-national Transport Body.
 
-# Open Source Analytics
+We work with our members and partners to improve transport across the North of England. Better transport helps people access jobs, education and services. It also supports economic growth and creates opportunities for communities and businesses.
 
-TfN has been building analytical tools for business cases since its inception in 2018. We believe that the best way to achieve the highest value for money from these tools is to share them with partners and other public bodies in the UK. Therefore, we share many of our analytics tools and processes on GitHub, allowing for transparency, scrutiny, and use by others.
-The repositories fall into one of two categories: internal TfN, or Common Analytical Framework.
+We provide evidence, analysis and advice to help shape transport investment and policy. Our work ensures decisions are informed by local knowledge and robust analysis.
+
+Find out more on the [Transport for the North website](https://www.transportforthenorth.com/).
+
+# Open source analytics
+
+We develop data, modelling and analytical tools to support transport planning, appraisal and decision-making.
+
+We believe public sector tools should be transparent, accessible and deliver value for money. We publish many of our tools, methods and processes on GitHub so that partners and other public bodies can use, review and improve them.
+
+Our repositories fall into two categories:
+
+- Internal TfN tools
+- Common Analytical Framework (CAF) tools
 
 # Common Analytical Framework (CAF)
 
-The Common Analytical Framework (CAF) is a collaboration between transport bodies in the UK to develop and maintain commonly used transport analytical and appraisal tools. The tools and processes that fall into this category generally are branded as "caf.X" and are built in collaboration with other transport bodies. CAF tools are generic and flexible processes which allow others to pick up and use in their analytics. The CAF has been built in many smaller modules to allow a range of use-cases, from taking an entire model as is, to selecting just to relevant components.
+The Common Analytical Framework (CAF) is a partnership between transport organisations across the UK.
 
-For further information on the CAF, please see the <https://www.transportforthenorth.com/tame>.
+CAF provides a shared set of tools and processes for transport modelling, appraisal and analysis. It helps organisations work in a more consistent, transparent and efficient way.
+
+CAF tools are usually developed jointly with other transport bodies and are typically branded as "caf.X". They are designed to be flexible. Organisations can use individual components or combine them into larger analytical workflows.
+
+To find out more about the tools and data we have available, please visit our [resource hub](https://www.transportforthenorth.com/resources).
 
 - [What is CAF?](#what-is-caf)
 - [Who is CAF for?](#who-is-caf-for)
@@ -31,8 +46,6 @@ For further information on the CAF, please see the <https://www.transportforthen
   - [Installation](#installation)
 - [CAF Development](#caf-development)
   - [CAF Design Principles](#caf-design-principles)
-    - [Processing Layer](#processing-layer)
-    - [Interface Layer](#interface-layer)
   - [Governance and Development](#governance-and-development)
   - [Future Enhancements and Contributions](#future-enhancements-and-contributions)
 - [Useful Links](#useful-links)
@@ -40,50 +53,51 @@ For further information on the CAF, please see the <https://www.transportforthen
 
 ## What is CAF?
 
-CAF is Transport for the North's structured suite of analytical tools designed to support transport modelling, appraisal, and strategic decision-making.
+CAF is a suite of analytical tools and models that supports transport modelling, appraisal and strategic planning.
 
-CAF provides a consistent, transparent and reusable approach to:
+CAF provides a consistent approach to:
 
-- Processing transport datasets
-- Developing modelling inputs
+- Processing transport data
+- Preparing modelling inputs
 - Running analytical workflows
-- Supporting forecasting and appraisal
-- Generating outputs for policy and business case development
+- Producing forecasts
+- Supporting business cases and policy development
 
-CAF improves confidence, consistency and efficiency across TfN projects and partner organisations.
+CAF helps improve confidence, consistency and efficiency across projects.
 
 ## Who is CAF for?
 
 CAF is designed for:
 
-- Transport modellers and planners
-- Transport data analysts and engineers
-- Consultants delivering TfN-aligned work
-- Partner organisations exploring TfN tools
+- Transport modellers
+- Transport planners
+- Data analysts and engineers
+- Consultants working on transport projects
+- Organisations interested in using TfN tools
 
 > [!NOTE]
-> The use of most CAF tools currently require some programming knowledge, usually Python.
+> Most CAF tools currently require some knowledge of Python.
 
 ## When should I use CAF?
 
-You should consider CAF when you need to:
+You should consider using CAF when you need to:
 
-- Standardise and process transport data
-- Analyse land use data
-- Prepare modelling inputs, including NTEM datasets
-- Develop highway / public transport / freight matrices
-- Manipulate and transform matrices
-- Conduct carbon or appraisal analysis
-- Be consistent with other organisations
+- Process transport data
+- Analyse land-use data
+- Prepare modelling inputs
+- Build highway, public transport or freight matrices
+- Transform and analyse matrices
+- Assess carbon impacts
+- Support transport appraisal
+- Work in a consistent way with other organisations
 
-CAF tools can be used independently or as part of a wider analytical pipeline.
+CAF tools can be used on their own or as part of a wider analytical process.
 
 > [!NOTE]
-> Some of CAF is not yet publicly available, these tend to be tools that we have had some external
-> interest in, but lack the resource to generalise at this time.
+> Some CAF tools are not yet publicly available.
 >
-> Please contact <TfNOffer@transportforthenorth.com> for more details on any unpublished tools /
-> analytics.
+> If you would like to know more about unpublished tools, please contact:
+> <TfNOffer@transportforthenorth.com>
 
 ## CAF Tools
 
@@ -91,19 +105,19 @@ CAF tools are usually focused in scope, doing one specific thing, and have relat
 
 List of some of the key tools available under CAF.
 
-| Name                                                                         | Description                                                                                                                                                                                                                                                                                                     | Users / Usecase                                                 | Usability      | Status    | Language   |
-|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|----------------|-----------|------------|
-| [caf.space](https://github.com/Transport-for-the-North/caf.space/)           | A tool for generating spatial translation definitions between two different zoning systems. Can handle translations based on weightings (such as population) or pure spatial area.                                                                                                                              | GIS Specialists and Transport Planners / Modellers              | Code, CLI, GUI | Release   | Python     |
-| [caf.toolkit](https://github.com/Transport-for-the-North/caf.toolkit/)       | A generalised toolkit of Python functionality that is useful for transport models, and other analytics. Includes functionality for things such as: common matrix manipulations, multiprocessing, logging, and model setup files.                                                                                | Python developers and data analysts                             | Code, CLI      | Release   | Python     |
-| [caf.distribute](https://github.com/Transport-for-the-North/caf.distribute/) | A collection of generalised tools for distributing transport data across a matrix. Includes a standard gravity model, a gravity model capable of handling multiple calibration areas, and an iterative proportional fitting algorithm                                                                           | Trip distribution modelling                                     | Code Only      | Beta      | Python     |
-| [caf.viz](https://github.com/Transport-for-the-North/caf.viz/)               | A generalised toolkit of visualisation functionality. Currently limited on capability, but under development                                                                                                                                                                                                    | Data analysts for model QA outputs                              | Code Only      | Pre-Alpha | Python     |
-| [caf.ntem](https://github.com/Transport-for-the-North/caf.ntem/)             | A tool for extracting data from DfT's National Trip End Model (NTEM), including base year, forecast years and interpolation to produce intermediary years. Datasets include trip ends, car ownership and planning data. Performs a similar task to DfT's TEMPro but allows for easier and automated extraction. | Transport planners using DfT's NTEM datasets                    | Code, CLI      | Beta      | Python     |
-| [caf.base](https://github.com/Transport-for-the-North/caf.base/)             | Python package containing definitions of zone systems and segmentations used across CAF tools. Introduces classes specific to transport (such as DVector), which are used to easily store and manipulate data formats often used in transport modelling and analysis, such as trip end and land use data.       | Transport modelling and planning, basis for other tools         | Code Only      | Beta      | Python     |
-| [caf.brain](https://github.com/Transport-for-the-North/caf.brain/)           | Package to simplify the use of common machine learning techniques within Python. The packages builds on top of scikit-learn and others and simplifies the process of setting up and running machine learning models.                                                                                            | Data analysts for machine learning                              | Code Only      | Beta      | Python     |
-| [OTP4GB-py](https://github.com/Transport-for-the-North/OTP4GB-py/)           | A Python package which uses Open Trip Planner to run public transport routing analysis. Outputs travel cost metrics for any modes for which data is given. Has some work-in-progress functionality for isochrone generation.                                                                                    | Transport routing analysis                                      | Code, CLI      | Release   | Python     |
-| [BODS-Extractor](https://github.com/Transport-for-the-North/BODS-Extractor/) | A Python package for extracting data from DfT's Bus Open Data Service (BODS) API. Allows for downloading bus schedules (GTFS format), live location data and producing "observed" bus schedules.                                                                                                                | Gathering bus timetables evidence                               | Code, CLI      | Release   | Python     |
-| [vis-core](https://github.com/Transport-for-the-North/vis-core/)             | Core React library for TfN Visualisation Framework frontend, used for producing interactive web maps and dashboards.                                                                                                                                                                                            | Data analysts, GIS specialists and web developers for web maps. | Code           | Beta      | Javascript |
-
+| Name                                                                         | Description                                                                                                                                                                                                    | Users / Usecase                                                 | Usability      | Status    | Language   |
+|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|----------------|-----------|------------|
+| [caf.space](https://github.com/Transport-for-the-North/caf.space/)           | Creates translations between different zoning systems using geography, population or other weighting factors.                                                                                                  | GIS Specialists and Transport Planners / Modellers              | Code, CLI, GUI | Release   | Python     |
+| [caf.toolkit](https://github.com/Transport-for-the-North/caf.toolkit/)       | Provides reusable Python tools for transport analysis, including matrix processing, logging and model configuration.                                                                                           | Python developers and data analysts                             | Code, CLI      | Release   | Python     |
+| [caf.distribute](https://github.com/Transport-for-the-North/caf.distribute/) | Builds transport demand matrices using established distribution methods, including gravity models and iterative proportional fitting.                                                                          | Trip distribution modelling                                     | Code Only      | Beta      | Python     |
+| [caf.viz](https://github.com/Transport-for-the-North/caf.viz/)               | Supports the creation of charts and visual outputs for analysis and model quality assurance.                                                                                                                   | Data analysts for model QA outputs                              | Code Only      | Pre-Alpha | Python     |
+| [caf.ntem](https://github.com/Transport-for-the-North/caf.ntem/)             | Extracts and processes data from the Department for Transport's National Trip End Model (NTEM).                                                                                                                | Transport planners using DfT's NTEM datasets                    | Code, CLI      | Beta      | Python     |
+| [caf.base](https://github.com/Transport-for-the-North/caf.base/)             | Provides common transport data structures, zone systems and segmentations used across CAF.                                                                                                                     | Transport modelling and planning, basis for other tools         | Code Only      | Beta      | Python     |
+| [caf.mat](https://github.com/Transport-for-the-North/caf.mat/)               | Reads, writes and processes transport modelling matrices using a consistent approach.                                                                                                                          | Transport modelling and analysis                                | Code, CLI      | Beta      | Python     |
+| [caf.brain](https://github.com/Transport-for-the-North/caf.brain/)           | Simplifies the use of machine learning techniques within transport analytics workflows.                                                                                                                        | Data analysts for machine learning                              | Code Only      | Beta      | Python     |
+| [OTP4GB-py](https://github.com/Transport-for-the-North/OTP4GB-py/)           | Runs public transport routing analysis using OpenTripPlanner and produces travel cost measures.                                                                                                                | Transport routing analysis                                      | Code, CLI      | Release   | Python     |
+| [BODS-Extractor](https://github.com/Transport-for-the-North/BODS-Extractor/) | Downloads and processes bus timetable and vehicle location data from the Bus Open Data Service. Allows for downloading bus schedules (GTFS format), live location data and producing "observed" bus schedules. | Gathering bus timetables evidence                               | Code, CLI      | Release   | Python     |
+| [vis-core](https://github.com/Transport-for-the-North/vis-core/)             | A web mapping and dashboard framework used to build interactive visualisations and data products.                                                                                                              | Data analysts, GIS specialists and web developers for web maps. | Code           | Beta      | Javascript |
 
 ## CAF Models
 
@@ -111,14 +125,14 @@ CAF models are models in their own right, able to generate modelled data such as
 
 List of some of the key models available under CAF.
 
-| Name                                                                               | Description                                                                                                                                                                                                                                                             | Users / Usecase         | Usability      | Status  | Language |
-|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|----------------|---------|----------|
-| [NorMITs-demand](https://github.com/Transport-for-the-North/NorMITs-demand/)       | Bespoke transport demand model for taking land use data and using it to calculate synthetic travel demand matrices for different modes of travel. Additionally, contains travel forecasting functionality.                                                              | Travel demand modelling | Code, CLI      | Release | Python   |
-| [Land-Use](https://github.com/Transport-for-the-North/Land-Use/)                   | NorMITs Land Use is Transport for the North's (TfN) mainland GB population and employment model. it builds detailed population and employment vectors for a given base year, and can also build a range of scenario specific forecasts.                                 | Land-use modelling      |                | Release | Python   |
-| [caf.van](https://github.com/Transport-for-the-North/caf.van/)                     | A bespoke Python transport model that produces van demand for commute, service, delivery and personal trips. The model uses land use and van survey data to produce trip ends and a gravity model, calibrated to observed trip lengths, to produce the demand matrices. | Travel demand modelling | Code, CLI      | Release | Python   |
-| [caf-freight-tools](https://github.com/Transport-for-the-North/caf-freight-tools/) | HGV analytics and processing tools to produce HGV travel demands matrices.                                                                                                                                                                                              | Travel demand modelling | Code, CLI, GUI | Release | Python   |
-| [caf.carbon](https://github.com/Transport-for-the-North/caf.carbon/)               | Bespoke carbon emissions model to forecast travel fleet data and their emissions.                                                                                                                                                                                       | Carbon modelling        | Code, CLI      | Release | Python   |
-| [caf.cvt](https://github.com/Transport-for-the-North/caf.cvt/)               | Climate Vulnerability model to assign climate hazard risks to the transport network.                                                                                                                                                                                       | Climate modelling        | Code, CLI      | Beta | Python   |
+| Name                                                                               | Description                                                                                                    | Users / Usecase         | Usability      | Status  | Language |
+|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-------------------------|----------------|---------|----------|
+| [NorMITs-demand](https://github.com/Transport-for-the-North/NorMITs-demand/)       | Produces synthetic travel demand matrices and forecasts future travel demand across different transport modes. | Travel demand modelling | Code, CLI      | Release | Python   |
+| [Land-Use](https://github.com/Transport-for-the-North/Land-Use/)                   | Builds detailed population and employment datasets and can produce future development scenarios.               | Land-use modelling      |                | Release | Python   |
+| [caf.van](https://github.com/Transport-for-the-North/caf.van/)                     | Estimates van travel demand for commuting, service, delivery and personal travel.                              | Travel demand modelling | Code, CLI      | Release | Python   |
+| [caf-freight-tools](https://github.com/Transport-for-the-North/caf-freight-tools/) | Supports the analysis and modelling of heavy goods vehicle (HGV) movements.                                    | Travel demand modelling | Code, CLI, GUI | Release | Python   |
+| [caf.carbon](https://github.com/Transport-for-the-North/caf.carbon/)               | Forecasts transport-related carbon emissions and fleet impacts.                                                | Carbon modelling        | Code, CLI      | Release | Python   |
+| [caf.cvt](https://github.com/Transport-for-the-North/caf.cvt/)                     | Assesses climate hazards and vulnerability across transport networks.                                          | Climate modelling       | Code, CLI      | Beta    | Python   |
 
 ## How CAF fits within the analytical process
 

@@ -1,10 +1,11 @@
-<div align="center">
+<div align="center" style="background-color: white;">
 <a href="https://www.transportforthenorth.com/">
-<img src="https://www.transportforthenorth.com/">
+<img src="https://www.transportforthenorth.com/logo.svg"
+  alt="Transport for the North logo">
 </a>
 </div>
 
-# About us
+# About Us
 
 Transport for the North (TfN) is England’s first Sub-national Transport Body.
 
@@ -32,6 +33,8 @@ The Common Analytical Framework (CAF) is a partnership between transport organis
 CAF provides a shared set of tools and processes for transport modelling, appraisal and analysis. It helps organisations work in a more consistent, transparent and efficient way.
 
 CAF tools are usually developed jointly with other transport bodies and are typically branded as "caf.X". They are designed to be flexible. Organisations can use individual components or combine them into larger analytical workflows.
+
+To find out more about the tools and data we have available, please visit our [resource hub](https://www.transportforthenorth.com/resources).
 
 - [What is CAF?](#what-is-caf)
 - [Who is CAF for?](#who-is-caf-for)

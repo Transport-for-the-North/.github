@@ -19,8 +19,6 @@ The repositories fall into one of two categories: internal TfN, or Common Analyt
 
 The Common Analytical Framework (CAF) is a collaboration between transport bodies in the UK to develop and maintain commonly used transport analytical and appraisal tools. The tools and processes that fall into this category generally are branded as "caf.X" and are built in collaboration with other transport bodies. CAF tools are generic and flexible processes which allow others to pick up and use in their analytics. The CAF has been built in many smaller modules to allow a range of use-cases, from taking an entire model as is, to selecting just to relevant components.
 
-For further information on the CAF, please see the <https://www.transportforthenorth.com/tame>.
-
 - [What is CAF?](#what-is-caf)
 - [Who is CAF for?](#who-is-caf-for)
 - [When should I use CAF?](#when-should-i-use-caf)

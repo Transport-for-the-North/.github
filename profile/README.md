@@ -1,7 +1,6 @@
-<div align="center" style="background-color: white;">
+<div align="center">
 <a href="https://www.transportforthenorth.com/">
-<img src="https://www.transportforthenorth.com/logo.svg"
-  alt="Transport for the North logo">
+<img src="tfn-logo.svg" alt="Transport for the North logo" height=150>
 </a>
 </div>
 

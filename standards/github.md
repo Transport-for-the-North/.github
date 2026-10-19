@@ -1,10 +1,10 @@
 # GitHub Standards
 
-Outlined here are the standards / conventions used within TfN, and CAF, for using
-[Git](https://git-scm.com/) and [GitHub](https://github.com/Transport-for-the-North).
+This document defines practical standards for using [Git](https://git-scm.com/) and GitHub in a
+collaborative software project.
 
 > [!NOTE]
-> See [Contributing Guide](../CONTRIBUTING.md) for TfN's full contribution guidance.
+> See [Contributing Guide](../CONTRIBUTING.md) for repository-level contribution guidance.
 
 - [Issues](#issues)
 - [Pull Requests](#pull-requests)
@@ -12,30 +12,79 @@ Outlined here are the standards / conventions used within TfN, and CAF, for usin
 - [Branches](#branches)
 - [Creating a Repository](#creating-a-repository)
 
-> [!WARNING]
-> TODO - this section is work-in-progress
->
-> Existing docs:
->
-> - [GitHub Slides](https://transportforthenorth.sharepoint.com/:p:/r/sites/TAMELearning/Shared%20Documents/05%20Coding/GitHub/Slides%20and%20videos/GitHub%20Intro/GitHub%20slides.pptx?d=w76f154186e1342979d508bde7fa66091&csf=1&web=1&e=QhIjZ2)
-> - [Coding Standards doc, section 3](https://transportforthenorth.sharepoint.com/:w:/r/sites/TAMEBusinessImprovements/Shared%20Documents/North/05%20Development/01%20Quality%20Handbook/01%20Code%20and%20Software%20Standards/Software%20Development%20and%20Coding%20Standards%20v2.0.docx?d=w64eb087c965f4e2abe2cf7e94986f6c6&csf=1&web=1&e=fCdK82)
+## What is stored on GitHub
+
+Should be on GitHub:
+
+- Source code.
+- Methodology, user guide and/or code documentation, this should be limited to objective
+  descriptions and be written in plaintext formats e.g. markdown or restructured text.
+- Code dependencies.
+- Code specific configuration e.g. Python's pyproject.toml.
+
+> [!NOTE]
+> Documentation can include dummy example inputs and outputs to show how processes work,
+> if used these should be completely randomly generated and should not contain any
+> real data.
+
+Should **not** be on GitHub:
+
+- Data - no data should be stored on any GitHub repository.
+- Parameters derived from real data.
+- Project reports - reports containing any details on results or similar.
+- IDE (VS Code/PyCharm) or local environment settings.
+- Account details/passwords.
 
 ## Issues
 
+- Create an issue for bugs, technical debt, and feature requests.
+- Use clear titles and enough context to reproduce or implement the change.
+- Keep one issue focused on one problem/outcome where practical.
+- Link pull requests to their related issues.
+
+<!-- TODO: Add issue lifecycle guidance (labels, ownership, prioritisation, and closure conventions). -->
+
 ## Pull Requests
 
-Example to base our PR docs on <https://github.com/alphagov/styleguides/blob/master/pull-requests.md>
+- Open a pull request for all changes merged into `main`.
+- Prefer small, focused pull requests over large mixed changes.
+- Use draft pull requests early for visibility and discussion.
+- Include a clear summary, validation evidence, and any rollout/risk notes.
+- Request review and address feedback before merge.
+
+<!-- TODO: Add minimum review expectations (for example, when domain review and code-quality review should be split). -->
 
 ## Commits
 
+- Make commits atomic: each commit should represent one logical change.
+- Write commit messages in imperative mood (for example, "Add input validation").
+- Avoid committing generated artifacts unless the repository explicitly tracks them.
+- Keep commit history readable (squash/fixup when appropriate before merge).
+
+> [!TIP]
+> See [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for some
+> more specific examples of commit formats to follow.
+
 ## Branches
+
+- Keep `main` stable and releasable.
+- Protect `main` with pull-request-only merges and required checks.
+- Do all development on topic branches; never commit directly to `main`.
+- Use short-lived branches with descriptive names (for example, `feat/...`, `fix/...`).
+- Rebase or merge from `main` regularly to reduce integration risk.
+
+<!-- TODO: Add guidance for large/interdependent changes (for example, staged integration branches and merge strategy). -->
 
 ## Creating a Repository
 
-> [!WARNING]
-> TODO - this section is work-in-progress
+- Check whether an existing repository can host the work before creating a new one.
+- Start from an approved template where available.
+- Configure core defaults at creation time:
+  - branch protection on `main`
+  - required CI checks
+  - code owners/review settings
+  - issue and pull request templates
+  - license and README
 
-- Check another similar repo doesn't already exist, if so consider adding the functionality there
-- Use [cookiecutter-caf](https://github.com/Transport-for-the-North/cookiecutter-caf) for
-  Python packages, or other templates where relavant (**list these**)
-- Setup some default settings for the repo e.g. branch protection
+<!-- TODO: Add baseline GitHub Actions guidance for new repositories (required checks, triggers, and ownership). -->
+<!-- TODO: Add external collaboration guidance for private vs public repositories (direct access vs fork-based workflow). -->

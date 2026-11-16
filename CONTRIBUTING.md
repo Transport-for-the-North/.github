@@ -45,6 +45,20 @@ For smaller pieces of work, such as a bug fix, a normal pull request can be made
 > See [PR Standards](standards/github.md#pull-requests) for TfN's full guidance on creating
 > pull requests and issues.
 
+### Creating New Repositories
+
+Before creating a new repository:
+
+- Check whether an existing TfN repository can reasonably host the work.
+- For Python package repositories, use
+  [cookiecutter-caf](https://github.com/Transport-for-the-North/cookiecutter-caf).
+- Configure baseline repository controls at creation time (for example branch protection and
+  required checks).
+
+> [!NOTE]
+> See [Creating a Repository Standards](standards/github.md#creating-a-repository) for TfN's
+> full setup checklist.
+
 ### Coding Standards
 
 Python is the most commonly used programming language used with TfN, it is also the preferred
@@ -62,7 +76,7 @@ standards can be summarised as:
 - Type annotations must be used and checked, and all errors corrected, by running [mypy](https://github.com/python/mypy)
 - Code must include unittests, and integration tests (where relevant), built with [pytest](https://docs.pytest.org/en/stable/)
 
-For any new Python package repositories consider using the
+For any new Python package repositories use the
 [cookiecutter-caf](https://github.com/Transport-for-the-North/cookiecutter-caf) template, which
 will create a repository structure matching the TfN standards.
 

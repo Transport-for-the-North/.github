@@ -3,26 +3,32 @@
 This document defines practical standards for writing maintainable, production-ready Python.
 Apply these standards to all new code and to modified code where reasonable.
 
-The standards can be summarised into 3 main points:
+The standards can be summarised into 4 main points:
 
 - Follow [PEP-8](https://peps.python.org/pep-0008/) Python standards, using ruff (and pylint)
   to handle formatting and checking.
 - Include type annotations, using mypy to automatically check types.
 - Docstrings should be written for **all** public modules, functions and classes.
+- Support, at minimum, the latest 3 Python versions for CAF packages unless there is a clear
+  project-specific reason not to.
 
 > [!NOTE]
 > See [Contributing Guide](../CONTRIBUTING.md) for TfN's full contribution guidance.
 
 - [Dependency Management](#dependency-management)
+  - [Python Version Support](#python-version-support)
   - [requirements.txt](#requirementstxt)
   - [Licenses](#licenses)
 - [Linting Tools](#linting-tools)
   - [Ruff](#ruff)
   - [MyPy](#mypy)
+- [Module and Package Structure](#module-and-package-structure)
 - [Documentation](#documentation)
   - [Docstrings](#docstrings)
-  - [Example Function Docstring](#example-function-docstring)
+    - [Example Function Docstring](#example-function-docstring)
     - [Example Class Docstring](#example-class-docstring)
+  - [Sphinx Documentation](#sphinx-documentation)
+  - [Examples Folder](#examples-folder)
 - [Testing (pytest)](#testing-pytest)
 - [Notebooks](#notebooks)
   - [Alternatives](#alternatives)
@@ -30,8 +36,12 @@ The standards can be summarised into 3 main points:
 
 ## Dependency Management
 
-<!-- TODO: Add virtual environment guidance (for example, one environment per project and recommended environment managers). -->
-<!-- TODO: Add policy for supported Python version range (minimum/target) and upgrade cadence. -->
+### Python Version Support
+
+- CAF packages should support at least the latest 3 Python versions.
+- Other TfN packages may support fewer versions where newer Python features are required.
+- Set and document supported versions in project configuration (for example `pyproject.toml`) and
+  keep CI aligned with that support policy.
 
 ### requirements.txt
 
@@ -42,15 +52,17 @@ The standards can be summarised into 3 main points:
 
 ### Licenses
 
-TODO add more details about acceptable licenses and how to check with GitHub badges.
-
-- Only add dependencies with open licenses.
+- Only add dependencies with a GitHub-recognized approved license, or explicit manual approval
+  before use.
+- Verify package licenses from source repositories and registry metadata before adding
+  dependencies.
 - Review transitive dependencies when introducing new top-level packages.
 - If license obligations require attribution or notices, include them in project documentation.
 
 ## Linting Tools
 
-To ensure coding standards are easy to follow and check...
+Linting tools provide consistent automated checks for code style, correctness, and type safety,
+helping teams catch issues early and keep codebases maintainable.
 
 ### Ruff
 
@@ -82,9 +94,28 @@ MyPy is the primary static type checker, and requires correct and detailed
 Type annotations should be written on all new functions and methods and should be added to
 existing code whenever changes are made.
 
+## Module and Package Structure
+
+- Prefer clear module responsibilities over many very small files.
+- Split modules when they become hard to describe briefly in module-level documentation.
+- Use sub-packages sparingly; introduce them when they separate distinct functionality or
+  dependencies.
+- Prefer concise, clear module names; use multi-word names only when needed for clarity.
+
+> [!TIP]
+> Use the [cookiecutter-caf](https://github.com/Transport-for-the-North/cookiecutter-caf)
+> template to generate the Python package structure, among other things.
+
 ## Documentation
 
-<!-- TODO: Add standalone-script docstring requirements (usage examples, limitations, and version metadata when needed). -->
+Python projects should include enough documentation for other developers to understand what the
+code does, how to run it, and where its boundaries are.
+
+- Packages and modules should include docstrings that explain their purpose and key behavior.
+- Public functions, classes, and methods should include docstrings where users need usage and
+  behavior details.
+- Standalone scripts should include a top-level module docstring describing intended use, required
+  inputs/configuration, and notable limitations.
 
 ### Docstrings
 
@@ -104,7 +135,7 @@ a "Raises" section should be include to describe the key errors which are likely
 by the function during expected use, it doesn't need to include a full list of all possible
 errors.
 
-### Example Function Docstring
+#### Example Function Docstring
 
 ```python
 def parse_limits(
@@ -166,6 +197,40 @@ class Test:
         """Attribute only available on class instances."""
 ```
 
+### Sphinx Documentation
+
+We use [Sphinx](https://www.sphinx-doc.org/en/master/) to build package documentation from
+docstrings and supporting [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html)
+pages. This is why module, class, and function docstrings should stay clear, accurate, and up to date.
+
+A typical docs layout (as used by the CAF Python template) is:
+
+- `docs/`
+  - `source/` - documentation source files and Sphinx configuration.
+  - `requirements.txt` - documentation build dependencies.
+  - `Makefile` and `make.bat` - local documentation build commands.
+
+Standalone scripts that are part of a package should still include module-level docstrings so
+their purpose and usage can be surfaced in generated docs where relevant.
+
+### Examples Folder
+
+CAF-style Python repositories include an `examples/` folder to hold runnable code examples
+that support user documentation.
+
+- `examples/*.py` lightweight Python scripts should be written to show examples in how to use
+  the package code, *these are picked up by Sphinx Gallery and rendered into the docs examples
+  pages.*
+- `examples/GALLERY_HEADER.rst` provides introductory text for the generated examples section.
+
+In the standard Sphinx setup, these examples are included in the built documentation via the
+`sphinx_gallery.gen_gallery` configuration in `docs/source/conf.py`.
+
+> [!NOTE]
+> Example config files, or other dataset examples, could be included in this folder.
+> However, these **should not contain real data** and should just show the structure
+> of the config.
+
 ## Testing (pytest)
 
 - Use `pytest` for unit and integration tests.
@@ -176,13 +241,13 @@ class Test:
 ## Notebooks
 
 [Jupyter Notebooks](https://docs.jupyter.org/en/latest/) are useful for exploration, prototyping,
-and technical communication.
+and technical communication, but should not be committed to repositories.
 
-- Keep production logic in Python modules/packages, not only in notebooks.
-- If notebooks are versioned, clear output cells before commit and avoid embedding sensitive data.
-- Prefer text-friendly notebook workflows where possible, see [Alternatives](#alternatives).
+- Do not include `.ipynb` files in repositories.
+- Keep production logic in Python modules/packages.
+- Use text-based alternatives for notebook-style workflows, see [Alternatives](#alternatives).
 
-<!-- TODO: Add decision criteria for when notebook prototypes must be migrated into package/module code. -->
+<!-- REVIEW: Confirm whether the notebook prohibition should remain absolute or allow exceptions in some repositories. -->
 
 ### Alternatives
 

@@ -263,4 +263,5 @@ There are notebook alternatives and workflows that are easier to review in Git:
 
 ## Versioning
 
-[Semantic Versioning](https://semver.org/)
+CAF codebases follow [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`) for
+release versions, see [Releases (Contributing Guide)](../CONTRIBUTING.md#releases) for details.

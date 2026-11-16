@@ -8,6 +8,7 @@ collaborative software project.
 
 - [What is stored on GitHub](#what-is-stored-on-github)
 - [Issues](#issues)
+- [Security Reports](#security-reports)
 - [Pull Requests](#pull-requests)
 - [Commits](#commits)
 - [Branches](#branches)
@@ -54,11 +55,21 @@ Should **not** be on GitHub:
 - Close issues with a short summary of what changed and links to related pull requests where
   available.
 
+## Security Reports
+
+- Do not open public issues for suspected vulnerabilities, exposed secrets, or other sensitive
+  security concerns.
+- Report security concerns privately to repository maintainers using the agreed private reporting
+  route.
+- Include enough detail to reproduce and assess the issue, but avoid sharing sensitive data more
+  widely than needed.
+
 ## Pull Requests
 
 - Open a pull request for all changes merged into `main`.
 - Prefer small, focused pull requests over large mixed changes.
-- Use draft pull requests early for visibility and discussion.
+- Use draft pull requests early for visibility and discussion, these should explain
+  the planned changes and expected scope in the PR description.
 - Include a clear summary, validation evidence, and any rollout/risk notes.
 - Request review and address feedback before merge.
 - For broader changes, separate domain-review concerns from code-quality concerns in the PR
@@ -101,6 +112,7 @@ Should **not** be on GitHub:
   - required CI checks (code linting, automated testing, release and deployments),
     these are defined in the relevant repository template
   - code owners/review settings
+  - issue and pull request templates
   - license and README
 
 > [!TIP]

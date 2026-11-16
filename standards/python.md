@@ -237,6 +237,7 @@ In the standard Sphinx setup, these examples are included in the built documenta
 - Add or update tests for all behavior changes and bug fixes.
 - Keep tests deterministic, isolated, and readable.
 - Run relevant tests locally before opening a pull request.
+- Test building documentation when docstrings or documentation pages are changed.
 
 ## Notebooks
 

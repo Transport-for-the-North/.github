@@ -15,6 +15,10 @@ The standards can be summarised into 4 main points:
 > [!NOTE]
 > See [Contributing Guide](../CONTRIBUTING.md) for TfN's full contribution guidance.
 
+- [Quick Start](#quick-start)
+  - [New Repository](#new-repository)
+  - [Conda (Miniforge) Environments](#conda-miniforge-environments)
+  - [pyproject.toml](#pyprojecttoml)
 - [Dependency Management](#dependency-management)
   - [Python Version Support](#python-version-support)
   - [requirements.txt](#requirementstxt)
@@ -34,6 +38,40 @@ The standards can be summarised into 4 main points:
   - [Alternatives](#alternatives)
 - [Versioning](#versioning)
 
+## Quick Start
+
+### New Repository
+
+For new Python repositories, start from
+[cookiecutter-caf](https://github.com/Transport-for-the-North/cookiecutter-caf) and then align
+your project with these standards:
+
+1. Set supported Python versions and core tooling in `pyproject.toml` (see
+   [pyproject.toml](#pyprojecttoml)).
+2. Configure and run linting/type-checking (see [Linting Tools](#linting-tools)).
+3. Add tests and run relevant checks locally (see [Testing (pytest)](#testing-pytest)).
+4. Document modules, public APIs, and usage examples (see [Documentation](#documentation)).
+
+### Conda (Miniforge) Environments
+
+[Miniforge](https://github.com/conda-forge/miniforge) provides a lightweight Conda distribution
+for managing isolated Python environments. Use one environment per repository to keep dependencies
+reproducible and avoid conflicts across projects.
+
+> [!TIP]
+> Match your environment Python version to the supported versions documented in
+> [Python Version Support](#python-version-support).
+
+### pyproject.toml
+
+`pyproject.toml` is the central project configuration for Python repositories and should define
+packaging metadata and development tooling settings (for example ruff, mypy, and pytest).
+
+Use the CAF template version as a reference
+[cookiecutter-caf pyproject.toml](https://github.com/Transport-for-the-North/cookiecutter-caf/blob/main/%7B%7B%20cookiecutter.project_slug%20%7D%7D/pyproject.toml)
+or see [Writing your `pyproject.toml`](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)
+for more details.
+
 ## Dependency Management
 
 ### Python Version Support
@@ -45,10 +83,19 @@ The standards can be summarised into 4 main points:
 
 ### requirements.txt
 
-- Define runtime dependencies in `requirements.txt`.
-- Pin direct dependencies to stable ranges or exact versions suitable for reproducible environments.
+- Define runtime dependencies in `requirements.txt` files.
+- Pin minimum version or stable ranges to allow for flexibility in creating environments.
+- Create separate files for development, documentation or optional dependencies, e.g.
+  `requirements-dev.txt`, `docs/requirements.txt` or `requirements-{feature}.txt`.
 - Keep dependency files up to date when adding, removing, or upgrading packages.
-- Avoid unused dependencies.
+- Link to the requirements files in the dependencies section of [pyproject.toml](#pyprojecttoml).
+- Use `requirements-lock.txt` or [pylock.toml](https://packaging.python.org/en/latest/specifications/pylock-toml/)
+  to create specific dependency lists for environment reproducibility.
+
+> [!TIP]
+> pip supports various definitions of dependencies in the
+> [requirements file format](https://pip.pypa.io/en/stable/reference/requirements-file-format/),
+> including git repositories, optional dependencies and URLs.
 
 ### Licenses
 
@@ -63,6 +110,11 @@ The standards can be summarised into 4 main points:
 
 Linting tools provide consistent automated checks for code style, correctness, and type safety,
 helping teams catch issues early and keep codebases maintainable.
+
+> [!NOTE]
+> Tool configuration should be stored in `pyproject.toml`, see
+[cookiecutter-caf pyproject.toml](https://github.com/Transport-for-the-North/cookiecutter-caf/blob/main/%7B%7B%20cookiecutter.project_slug%20%7D%7D/pyproject.toml)
+> for a template example.
 
 ### Ruff
 
@@ -81,7 +133,7 @@ the check command:
   could change the exact implementation of the code logic so should be checked more
   thoroughly if used.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Ruff does not currently support all Pylint rules, so pylint should be used as
 > a secondary linter to catch anything ruff misses.
 > [Issue 970](https://github.com/astral-sh/ruff/issues/970) on ruff's GitHub repository
@@ -116,6 +168,9 @@ code does, how to run it, and where its boundaries are.
   behavior details.
 - Standalone scripts should include a top-level module docstring describing intended use, required
   inputs/configuration, and notable limitations.
+- Inline comments should be used sparingly to explain *why* a decision was made, not *what* the
+  code is doing.
+- Docstrings should explain what a function/class/module does and how to use it.
 
 ### Docstrings
 
@@ -128,7 +183,7 @@ with the following exceptions:
   of having a specific Attributes section in the class docstring, see
   [Example Class Docstring](#example-class-docstring).
 
-Docstrings contain different sections, e.g. parameters, returns, raises... (see
+Docstrings contain different sections, e.g. parameters, returns, examples, raises... (see
 [Numpy docstring Style Guide](https://numpydoc.readthedocs.io/en/latest/format.html) for full
 details), these should only be included when they add useful information. For example
 a "Raises" section should be include to describe the key errors which are likely to be raised

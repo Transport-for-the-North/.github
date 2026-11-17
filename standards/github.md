@@ -13,6 +13,7 @@ collaborative software project.
 - [Commits](#commits)
 - [Branches](#branches)
 - [Creating a Repository](#creating-a-repository)
+  - [GitHub Actions](#github-actions)
   - [Repository Templates](#repository-templates)
 
 ## What is stored on GitHub
@@ -104,20 +105,30 @@ Should **not** be on GitHub:
 
 - Check whether an existing repository can host the work before creating a new one.
 - Use one of TfN's [Repository Templates](#repository-templates) when creating a new
-  repository:
-  - For Python packages, use
-    [cookiecutter-caf](https://github.com/Transport-for-the-North/cookiecutter-caf).
+  repository.
 - Configure core defaults at creation time:
   - branch protection on `main`
   - required CI checks (code linting, automated testing, release and deployments),
     these are defined in the relevant repository template
-  - code owners/review settings
-  - issue and pull request templates
   - license and README
 
+> [!NOTE]
+> Issue and pull request templates and the contributing guide are
+> defined at the organisation level so shouldn't need defining in
+> most repositories.
+
+### GitHub Actions
+
+GitHub Actions should be used for repository automation such as linting, testing, docs checks,
+release workflows, and deployments where relevant.
+
+- Define workflows in `.github/workflows`.
+- Keep required checks aligned with branch protection and pull request requirements.
+- Reuse template workflows where possible for consistency.
+
 > [!TIP]
-> Check [`{{ cookiecutter.project_slug }}/.github/workflows` (cookiecutter-caf)](https://github.com/Transport-for-the-North/cookiecutter-caf/tree/main/%7B%7B%20cookiecutter.project_slug%20%7D%7D/.github/workflows)
-> for examples of GitHub actions for a Python repository.
+> For Python repositories, see workflow examples in cookiecutter-caf:
+> [`{{ cookiecutter.project_slug }}/.github/workflows`](https://github.com/Transport-for-the-North/cookiecutter-caf/tree/main/%7B%7B%20cookiecutter.project_slug%20%7D%7D/.github/workflows).
 
 ### Repository Templates
 

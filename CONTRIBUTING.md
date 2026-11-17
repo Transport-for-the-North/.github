@@ -79,14 +79,13 @@ Pull request descriptions should include:
 Before creating a new repository:
 
 - Check whether an existing TfN repository can reasonably host the work.
-- For Python package repositories, use
+- Find a suitable [TfN repository template](standards/github.md#repository-templates), e.g.
+  for Python package repositories use
   [cookiecutter-caf](https://github.com/Transport-for-the-North/cookiecutter-caf).
-- Configure baseline repository controls at creation time (for example branch protection and
-  required checks).
-- Ensure key repository defaults are in place before the first merge:
+- Configure baseline repository controls are in place:
+  - branch protection
   - CI checks enabled for linting and tests
-  - `CODEOWNERS`/review settings configured
-  - issue/PR templates present
+  - review settings configured
 
 > [!NOTE]
 > See [Creating a Repository Standards](standards/github.md#creating-a-repository) for TfN's

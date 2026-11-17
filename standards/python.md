@@ -106,6 +106,10 @@ for more details.
 - Review transitive dependencies when introducing new top-level packages.
 - If license obligations require attribution or notices, include them in project documentation.
 
+> [!IMPORTANT]
+> Speak to a member of the [CAF Admins team](https://github.com/orgs/Transport-for-the-North/teams/caf-admins)
+> if you have any questions/concerns around the use of a specific Python package.
+
 ## Linting Tools
 
 Linting tools provide consistent automated checks for code style, correctness, and type safety,

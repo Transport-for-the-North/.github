@@ -82,10 +82,10 @@ Before creating a new repository:
 - Find a suitable [TfN repository template](standards/github.md#repository-templates), e.g.
   for Python package repositories use
   [cookiecutter-caf](https://github.com/Transport-for-the-North/cookiecutter-caf).
-- Configure baseline repository controls are in place:
+- Configure baseline repository controls, including:
   - branch protection
   - CI checks enabled for linting and tests
-  - review settings configured
+  - code review settings
 
 > [!NOTE]
 > See [Creating a Repository Standards](standards/github.md#creating-a-repository) for TfN's
@@ -123,10 +123,14 @@ documented in a dedicated standards file.
 
 <!-- TODO: Add JS/TS standards document and link it here once available. -->
 
+> [!WARNING]
+> The JavaScript / TypeScript standards have not yet been published on GitHub,
+> contact a TfN staff member if you have any questions before they are published.
+
 ## Releases
 
-CAF codebases follow [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`) for
-release versions.
+CAF (and many other TfN) codebases follow [Semantic Versioning](https://semver.org/)
+(`MAJOR.MINOR.PATCH`) for release versions.
 
 > [!NOTE]
 > The main branch of a CAF repository is a work in progress and should be kept stable where
